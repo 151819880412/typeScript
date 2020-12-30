@@ -1,0 +1,1 @@
+!function(){"use strict";console.log(3),console.log("你好");var o={name:"a",age:18};console.log(o)}();

@@ -1,0 +1,1 @@
+export const nihao = '你好'
