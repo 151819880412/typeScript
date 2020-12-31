@@ -1,21 +1,24 @@
 (() => {
 
-  class Animal {
-    name:string;
-    constructor(name:string){
-      this.name = name
+  // 以 abstract 开头的类是抽象类
+  // 抽象类和其他类差别不大，只是不能用来创建对象(let animal = new Animal())
+  // 抽象类就是专门用来被继承的类
+  // 抽象类中可以添加抽象方法
+  abstract class Animal {
+    name: string;
+    constructor(name: string) {
+      this.name = name;
     };
-    say(){
-      console.log('叫~')
-    }
+    // 定义一个抽象方法，没有方法体
+    // 抽象方法只能定义在抽象类中。子类必须对抽象方法进行重写
+    abstract say(): void;
   }
-  class Dog extends Animal{
-    say(){
-      // 在类的方法中 super 就表示当前类的父类
-      super.say()
+  class Dog extends Animal {
+    say() {
+      console.log('抽象类的抽象方法');
     };
   }
-  const dog = new Dog('旺财')
-  dog.say()
+  const dog = new Dog('旺财');
+  dog.say();
 
 })();

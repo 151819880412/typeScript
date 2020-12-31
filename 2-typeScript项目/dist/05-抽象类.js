@@ -1,18 +1,18 @@
 "use strict";
 (() => {
+    // 以 abstract 开头的类是抽象类
+    // 抽象类和其他类差别不大，只是不能用来创建对象(let animal = new Animal())
+    // 抽象类就是专门用来被继承的类
+    // 抽象类中可以添加抽象方法
     class Animal {
         constructor(name) {
             this.name = name;
         }
         ;
-        say() {
-            console.log('叫~');
-        }
     }
     class Dog extends Animal {
         say() {
-            // 在类的方法中 super 就表示当前类的父类
-            super.say();
+            console.log('抽象类的抽象方法');
         }
         ;
     }
